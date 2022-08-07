@@ -1,0 +1,71 @@
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link href="{%static 'stories/css/style.css' %}" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <title>VOC-STORIES</title>
+    <script>
+      var video, reqBtn, startBtn, stopBtn, ul, stream, recorder;
+      $(document).ready(function () {
+        recordVideoInit();
+      });
+    </script>
+  </head>
+
+  <body>
+    <div class="mRoot">
+      <!-- <div class="photLogoBox">Upload Photo</div> -->
+      <!-- <input type="file" name="file" id="selectFile" class="hiddenInput" accept="image/*" onchange="fileSelected(this.value)">
+        <img src="./images/image.png" alt="Upload Photo" id="mImg" class="mImg" id="blah"> -->
+
+      <div style="display: flex">
+        <button id="request" class="recordButtons">
+          <i class="material-icons">camera</i>
+          Request
+        </button>
+        <button id="start" class="recordButtons">
+          <i class="material-icons" style="color: red">fiber_manual_record</i>
+          Start Recording
+        </button>
+        <button id="stop" class="recordButtons">
+          <i class="material-icons">stop</i>
+          Stop Recording
+        </button>
+      </div>
+      <div>
+        <ul id="ul">
+          Downloads List:
+        </ul>
+      </div>
+      <video
+        id="video"
+        autoplay
+        width="300"
+        height="300"
+        muted
+        controls
+      ></video>
+
+      <!-- <input type="text" name="brandName" id="brandName" placeholder="Enter your Brand name" onchange="brandName = this.value">
+        <input type="text" name="productName" id="productName" placeholder="Enter your Product name" onchange="productName = this.value"> -->
+
+      <div class="stories-message hidden">
+        <h2>Do you want to save {{brand}} stories?</h2>
+      </div>
+
+      <!-- <div class="pre" id="stories-saveBtn hidden"></div> -->
+      <button class="lowerButton hidden" id="save">Save Video</button>
+      <div class="stories-success hidden">
+        <h2>Thank you, Your {{brand}} Stories has been Saved.</h2>
+      </div>
+    </div>
+    <script src="{% static 'js/index.js' %}"></script>
+  </body>
+</html>

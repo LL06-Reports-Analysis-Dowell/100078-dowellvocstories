@@ -1,0 +1,523 @@
+:root {
+  --grey-background: lightgrey;
+}
+
+* {
+  transition: all 0.3s ease-in-out 0s;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  padding-top: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  max-width: 600px;
+}
+
+.mRoot {
+  min-width: 400px;
+  padding-top: 5px;
+  padding-bottom: 15px;
+  border: 0.1rem;
+  border-color: var(--grey-background);
+  border-radius: 0.5rem;
+  border-style: solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  max-width: 600px;
+  /* justify-content: center; */
+  /* min-height: 377px; */
+}
+
+.headerDiv {
+  padding: 1rem 10vw 1rem 10vw;
+  color: black;
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 2rem;
+  height: 10rem;
+}
+
+.modalRoot {
+  min-width: 300px;
+  max-width: 500px;
+  min-height: 800px;
+  padding-top: 5px;
+  padding-bottom: 15px;
+  border: 10px;
+  border-color: var(--grey-background);
+  border-radius: 15px;
+  border-style: solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  min-height: 377px;
+}
+
+.innerFrame {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  color: red;
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.pre {
+  width: 90%;
+  margin-top: 10px;
+}
+
+.hiddenInput {
+  display: block;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+/*  */
+
+.hLine {
+  color: red;
+  background-color: red;
+  height: 3px;
+  width: 95%;
+  margin: 1px;
+}
+
+.chartHeader {
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.buttonContent {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.bta {
+  background-color: gray;
+  color: white;
+  font-size: 12px;
+  font-weight: bolder;
+  height: 60px;
+  width: 115px;
+  cursor: pointer;
+  border-style: none;
+  flex: 0 2 115px;
+  transform: perspective(1000px) translateZ(0px);
+  border: none;
+  outline: none;
+  box-shadow: rgb(0 0 0 / 10%) 0px 10px 30px 0px;
+}
+
+.btb {
+  background-color: #98eb34;
+  color: white;
+  font-size: 12px;
+  font-weight: bolder;
+  height: 60px;
+  width: 115px;
+  cursor: pointer;
+  border-style: none;
+  flex: 0 1 115px;
+  border: none;
+  outline: none;
+  box-shadow: rgb(0 0 0 / 10%) 0px 10px 30px 0px;
+}
+
+.btb:hover,
+.bta:hover,
+.lowerButton:hover,
+.recordButtons:hover,
+.tButton:hover {
+  transform: perspective(1000px) translateZ(75px);
+}
+
+.recordButtons {
+  cursor: pointer;
+  pointer-events: initial;
+  width: 90px;
+  height: 90px;
+  background: #98eb34;
+  color: rgb(255, 255, 255);
+  border: none;
+  outline: none;
+  box-shadow: rgb(0 0 0 / 10%) 0px 10px 30px 0px;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  flex-direction: column;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 16px;
+  font-size: 11px;
+  letter-spacing: 0.916667px;
+  margin: 6px;
+  transform: perspective(1000px) translateZ(0px);
+  border-radius: 16px;
+}
+
+.recordButtons:disabled {
+  /* cursor: wait; */
+  background-color: #fff;
+  color: rgb(125, 0, 254);
+}
+.recordButtons:disabled:hover {
+  cursor: default;
+  transform: perspective(1000px) translateZ(0px);
+}
+
+.bContainer {
+  margin-top: 10px;
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.sButton {
+  width: 10%;
+  height: 15px;
+  border: none;
+  border-radius: 25px;
+  background-color: #eae745;
+  color: rgb(224, 91, 25);
+  font-size: 12px;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+.buttonsSub {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.ba {
+  font-size: xx-small;
+  align-self: flex-start;
+  justify-self: left;
+}
+.bb {
+  font-size: small;
+  align-self: flex-end;
+  justify-self: left;
+}
+.bc {
+  font-size: xx-small;
+  align-self: flex-start;
+  justify-self: left;
+}
+
+.chartImage {
+  width: 230px;
+  height: auto;
+  border-radius: 5px;
+  background-color: #eae745;
+}
+
+.closeButton {
+  align-self: end;
+  color: black;
+  background: white;
+  border: white;
+  font-variant: dark;
+  font-weight: bolder;
+  cursor: pointer;
+  font-size: x-large;
+}
+
+.mImg {
+  width: 100px;
+  height: 100px;
+  border-style: solid;
+  border-color: var(--grey-background);
+  border-radius: 5px;
+  border-width: 4px;
+  text-align: center;
+  font-weight: bolder;
+  font-size: 20px;
+  word-wrap: break-word;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.photLogoBox {
+  width: 19rem;
+  height: 9.5rem;
+  border-style: solid;
+  border-color: var(--grey-background);
+  border-radius: 5px;
+  border-width: 4px;
+  text-align: center;
+  font-weight: bolder;
+  font-size: 20px;
+  word-wrap: break-word;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.lowerText {
+  margin-top: 15px;
+  width: 70%;
+  word-wrap: break-word;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  font-weight: bolder;
+  margin-bottom: 15px;
+}
+
+.lowerButton {
+  margin-top: 0.5rem;
+  background-color: #98eb34;
+  border-color: #98eb34;
+  padding: 13px;
+  /* width: 80%; */
+  /* height: auto; */
+  /* min-height: 4rem; */
+  font-weight: bold;
+  font-size: 1.3rem;
+  border-style: none;
+  cursor: pointer;
+  max-width: 70%;
+  border: none;
+  outline: none;
+  box-shadow: rgb(0 0 0 / 10%) 0px 10px 30px 0px;
+}
+
+input {
+  width: 60%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  height: 30px;
+  background-color: var(--grey-background);
+  border-style: none;
+  padding: 15px;
+}
+
+input::placeholder {
+  font-size: larger;
+  font-weight: bolder;
+  text-align: center;
+  color: black;
+}
+
+.chBox {
+  align-self: end;
+  width: 20px;
+}
+
+.qrBox {
+  /* width: 60%; */
+  height: 200px;
+  text-align: center;
+  font-weight: bolder;
+  font-size: 20px;
+  word-wrap: break-word;
+  /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+.qrUri {
+  width: 80%;
+  /* height: auto; */
+  padding: 15px;
+  text-align: center;
+  font-weight: bold;
+  color: #000;
+  background-color: var(--grey-background);
+  font-size: 20px;
+  word-wrap: break-word;
+  /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+.orangeText {
+  color: orange;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.cLabel {
+  width: auto;
+  background: #eee;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px;
+  margin: 0 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cLabel:hover {
+  background: var(--grey-background);
+  cursor: pointer;
+}
+
+.centerText {
+  text-align: center;
+}
+
+.mailed {
+  font-size: 18px;
+  font-weight: bolder;
+  width: 80%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.blackText {
+  color: black;
+  font-weight: bold;
+  font-size: 15px;
+  width: 80%;
+}
+
+.threeButtonsDiv {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.greenQuestion {
+  color: #98eb34;
+  font-size: 18px;
+  font-weight: bolder;
+  width: 80%;
+}
+
+.highlight-red {
+  border-radius: 1em 0 1em 0;
+  background-image: linear-gradient(
+    -100deg,
+    rgba(255, 20, 0, 0.2),
+    rgba(255, 20, 0, 0.7) 95%,
+    rgba(255, 20, 0, 0.1)
+  );
+}
+
+.tButton {
+  font-size: large;
+  font-weight: bolder;
+}
+
+.policyDiv {
+  width: 90%;
+  height: 60vh;
+  scroll-behavior: auto;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  margin: 10;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    /* color: #000; */
+    /* background-color: #fff; */
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    max-height: 70vh;
+  }
+
+  .mRoot {
+    border: 3px;
+    border-color: rgb(218, 215, 215);
+    border-radius: 15px;
+    border-style: solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    /* height: 93vh; */
+  }
+  .modalRoot {
+    border: 3px;
+    border-color: rgb(218, 215, 215);
+    border-radius: 15px;
+    border-style: solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    /* height: 90vh; */
+  }
+}
+
+/* Modal Area */
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 400px;
+  height: 600px;
+}
+
+/* The Close Button */
+.mClose {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.mClose:hover,
+.mClose:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}

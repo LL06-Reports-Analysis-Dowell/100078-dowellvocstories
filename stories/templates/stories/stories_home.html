@@ -1,0 +1,60 @@
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./js/index.js"></script>
+    <link href="{%static 'stories/css/style1.css' %}" rel="stylesheet" />
+    <title>voc-stories</title>
+  </head>
+  <body>
+    <div class="mroot">
+      <div class="headerDiv">
+        Embed Code to your website to get
+        <span class="highlight-red">stories</span>
+      </div>
+
+      <hr class="hLine" />
+
+      <div style="text-align: center">
+        <h1 style="color: red">Question</h1>
+        <p style="font-weight: bold; font-size: 1.5rem">
+          Do you want to share Brand stories?
+        </p>
+        <img
+          src="{% static 'img/stories1.png' %}"
+          alt=""
+          style="width: 70vw; height: auto; max-width: 500px"
+        />
+      </div>
+
+      <hr class="hLine" />
+
+      <div style="text-align: center">
+        <h1>Report</h1>
+        <img
+          src="{% static 'img/stories2.PNG' %}"
+          alt=""
+          style="width: 70vw; height: auto; max-width: 500px"
+        />
+      </div>
+
+      <div class="buttonContent">
+        <button
+          class="bta"
+          onclick="location.href = 'http://127.0.0.1:8000/priview'"
+        >
+          Preview
+        </button>
+        <button
+          class="btb"
+          onclick="location.href = 'http://127.0.0.1:8000/qrgen'"
+        >
+          Create embedding code
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
