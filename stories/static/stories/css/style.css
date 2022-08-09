@@ -15,7 +15,8 @@ body {
   padding-top: 5px;
   padding-bottom: 15px;
   border: 10px;
-  border-color: rgb(218, 215, 215);
+  /* border-color: rgb(218, 215, 215); */
+  border-color: rgb(6, 247, 38);
   border-radius: 15px;
   border-style: solid;
   display: flex;

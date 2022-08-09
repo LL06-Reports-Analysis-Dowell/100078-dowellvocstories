@@ -84,6 +84,28 @@ class Record(View):
         file = models.Video.objects.create(video = content_file)
         return JsonResponse({'success':"success"})
     
+class Sample(View):
+    template_name = 'stories/stories_sample.html'
+    def get(self,request):
+        return render(request,self.template_name)
+    def post(self,request):
+        video_or_Audio = request.FILES['file']
+        content_file = ContentFile(video_or_Audio.read(), name=video_or_Audio.name)
+        file = models.Video.objects.create(video = content_file)
+        print(content_file)
+        return JsonResponse({'success':"success"})
+    
+class Sample1(View):
+    template_name = 'stories/stories_sample1.html'
+    def get(self,request):
+        return render(request,self.template_name)
+    def post(self,request):
+        video3 = request.FILES['file']
+        content_file = ContentFile(video3.read(), name=video3.name)
+        file = models.Video.objects.create(video = content_file)
+        print(content_file)
+        return JsonResponse({'success':"success"})
+    
 class SendMail(View):
     template_name = 'stories/stories_qrsend.html'
     def post(self, request):
